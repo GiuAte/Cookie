@@ -11,4 +11,5 @@
     <!-- Landing Page -->
     <color name="background_color">#FDF7F0</color>
     <color name="bottom_nav_selected_color">#FFFFFFFF</color>
+    <color name="newcolour">#FFFFFFFF</color>
 </resources>
