@@ -22,7 +22,7 @@ class ProfilePageFragment: Fragment() {
         return binding.root
     }
 
-    // Sistemare bug che non mi permette di tornare indietro al profilo..
+    //TODO Sistemare bug che non mi permette di tornare indietro al profilo..
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.settings.setOnClickListener{
