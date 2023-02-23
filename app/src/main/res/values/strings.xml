@@ -12,4 +12,19 @@
     <string name="navbar_myRecipes">Recipes</string>
     <string name="navbar_settings">Settings</string>
     <string name="search">Search</string>
+    <string name="fridge">Fridge</string>
+
+    <!-- Profile Page -->
+    <string name="string_app_logo">Cookie</string>
+    <string name="settings">Settings</string>
+    <string name="back_button">Back</string>
+    <string name="insertBio">Insert your bio here</string>
+    <string name="post_count">%0</string>
+    <string name="followers_count">%0</string>
+    <string name="chef_count">%0</string>
+    <string name="chef_count_name">Chefs</string>
+    <string name="followers_name">Followers</string>
+    <string name="post_name">Post</string>
+    <string name="profile_name">%profile</string>
+    <string name="navbar_profile">Profile</string>
 </resources>
