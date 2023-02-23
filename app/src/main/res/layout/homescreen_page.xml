@@ -10,6 +10,7 @@
         android:id="@+id/app_logo"
         android:layout_width="100dp"
         android:layout_height="70dp"
+        android:padding="5dp"
         app:srcCompat="@drawable/cookie_logo" />
 
     <android.widget.SearchView

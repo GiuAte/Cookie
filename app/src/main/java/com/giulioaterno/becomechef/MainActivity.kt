@@ -1,10 +1,13 @@
 package com.giulioaterno.becomechef
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.giulioaterno.becomechef.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,23 +20,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            setBottomBarClick(it)
-        }
-        replaceFragment(HomeScreenFragment())
+        //creo un riferimento al nav controller
+        val navHost = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+        val navController = navHost.navController
+
+        //creo un riferimento al widget per la bottom navigation
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigation.setupWithNavController(navController)
 
 }
-
-    private fun setBottomBarClick(it: MenuItem): Boolean {
-        when (it.itemId) {
-            R.id.home -> replaceFragment(HomeScreenFragment())
-            R.id.myFridge -> replaceFragment(MyFridgeFragment())
-            R.id.recipes -> replaceFragment(RecipesFragment())
-            R.id.settings -> replaceFragment(SettingsFragment())
-            R.id.profile -> replaceFragment(ProfilePageFragment())
-        }
-        return true
-    }
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager

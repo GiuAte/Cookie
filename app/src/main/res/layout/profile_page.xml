@@ -8,7 +8,7 @@
     tools:context=".ProfilePageFragment">
 
     <ImageView
-        android:id="@+id/app_logo"
+        android:id="@+id/appLogo"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:clickable="true"
@@ -113,8 +113,7 @@
         android:foreground="@drawable/circle_background"
         android:scaleType="centerCrop"
         android:src="@drawable/giulio_profile_picture"
-        app:riv_oval="true"
-        app:riv_scaleType="c" />
+        app:riv_oval="true" />
 
     <!--Spazio per nome profilo-->
     <TextView

@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/myFridge"
+        android:id="@id/myFridgeFragment"
         android:icon="@drawable/full_fridge"
         android:title="@string/fridge" />
 
     <item
-        android:id="@+id/recipes"
+        android:id="@id/recipesFragment"
         android:icon="@drawable/baseline_bookmark_24"
         android:title="@string/navbar_myRecipes" />
 
     <item
-        android:id="@+id/home"
+        android:id="@id/homeScreenFragment"
         android:icon="@drawable/baseline_home_24"
         android:title="@string/navbar_home" />
 
     <item
-        android:id="@+id/profile"
+        android:id="@id/profilePageFragment"
         android:icon="@drawable/baseline_person_24"
         android:title="@string/navbar_profile" />
 
     <item
-        android:id="@+id/settings"
+        android:id="@id/settingsFragment"
         android:icon="@drawable/baseline_settings_24"
         android:title="@string/navbar_settings" />
 </menu>
