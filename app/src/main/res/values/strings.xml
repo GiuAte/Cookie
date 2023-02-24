@@ -19,9 +19,9 @@
     <string name="settings">Settings</string>
     <string name="back_button">Back</string>
     <string name="insertBio">Insert your bio here</string>
-    <string name="post_count">%0</string>
-    <string name="followers_count">%0</string>
-    <string name="chef_count">%0</string>
+    <string name="post_count">%d</string>
+    <string name="followers_count">%d</string>
+    <string name="chef_count">%d</string>
     <string name="chef_count_name">Chefs</string>
     <string name="followers_name">Followers</string>
     <string name="post_name">Post</string>

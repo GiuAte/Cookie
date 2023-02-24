@@ -43,10 +43,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/postNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/post_count"
                     android:textStyle="bold" />
 
                 <TextView
@@ -65,10 +65,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/followersNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/followers_count"
                     android:textStyle="bold" />
 
                 <TextView
@@ -87,10 +87,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/chefNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/chef_count"
                     android:textStyle="bold" />
 
                 <TextView
@@ -118,6 +118,7 @@
     <!--Spazio per nome profilo-->
     <TextView
         android:id="@+id/profile_name"
+        android:fontFamily="@font/coolvetica_regular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_image"
@@ -129,7 +130,7 @@
 
     <!--Spazio per la bio-->
     <TextView
-        android:id="@+id/bio_textview"
+        android:id="@+id/bioTextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/profileDetails"
@@ -143,7 +144,7 @@
         android:id="@+id/grid_recyclerview_profile_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/bio_textview"
+        android:layout_below="@id/bioTextview"
         android:padding="16dp" />
 
     <ImageView
