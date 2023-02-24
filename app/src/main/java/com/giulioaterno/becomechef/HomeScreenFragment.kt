@@ -5,15 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.giulioaterno.becomechef.databinding.HomescreenPageBinding
+import com.google.gson.Gson
 
-@Suppress("UNREACHABLE_CODE")
+
 class HomeScreenFragment: Fragment() {
-
-    val searchView = binding.searchBar
-    val searchIcon = binding.searchBarLogo
 
     private var bindingHomePage: HomescreenPageBinding? = null
     private val binding get() = bindingHomePage!!
@@ -26,13 +25,6 @@ class HomeScreenFragment: Fragment() {
         bindingHomePage = HomescreenPageBinding.inflate(inflater, container, false)
         setRoundedIconRecyclerView(DataObject.usernameList)
         return binding.root
-        searchIcon.setOnClickListener {
-            if (searchView.visibility == View.GONE) {
-                searchView.visibility = View.VISIBLE
-            } else {
-                searchView.visibility = View.GONE
-            }
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,7 +35,12 @@ class HomeScreenFragment: Fragment() {
     }
 
     private fun setRoundedIconRecyclerView(list: List<ProfileRoundedIcon>) {
-        val adapterProfileRoundedIcon = ProfileRoundedIconAdapter(list)
+        val bundle = Bundle()
+        val adapterProfileRoundedIcon = ProfileRoundedIconAdapter(list) {
+            val profile = Gson().toJson(it)
+            bundle.putString("profile", profile)
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeScreenFragment_to_profilePageFragment, bundle)
+        }
         binding.bestChefRV.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = adapterProfileRoundedIcon
