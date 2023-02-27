@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background_color"
-    tools:context=".ProfilePageFragment">
+    tools:context=".Views.ProfilePageFragment">
 
     <ImageView
         android:id="@+id/appLogo"
@@ -47,6 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="%d"
                     android:textStyle="bold" />
 
                 <TextView
@@ -69,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="%d"
                     android:textStyle="bold" />
 
                 <TextView
@@ -90,6 +92,7 @@
                     android:id="@+id/chefNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="%d"
                     android:layout_gravity="center"
                     android:textStyle="bold" />
 

@@ -1,4 +1,4 @@
-package com.giulioaterno.becomechef
+package com.giulioaterno.becomechef.Views
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.giulioaterno.becomechef.DataObject
+import com.giulioaterno.becomechef.ProfileRoundedIcon
+import com.giulioaterno.becomechef.R
 import com.giulioaterno.becomechef.databinding.ProfilePageBinding
 import com.google.gson.Gson
 
-class ProfilePageFragment: Fragment() {
+class ProfilePageFragment : Fragment() {
 
     private var bindingProfilePage: ProfilePageBinding? = null
     private val binding get() = bindingProfilePage!!
@@ -23,6 +26,7 @@ class ProfilePageFragment: Fragment() {
         val bundle = arguments
         val myString = bundle?.getString("profile")
         val profile = Gson().fromJson(myString, ProfileRoundedIcon::class.java)
+        //TODO ADD IF ELSE
         setProfile(profile)
         return binding.root
     }

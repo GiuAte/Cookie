@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.giulioaterno.becomechef.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -21,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //creo un riferimento al nav controller
-        val navHost = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         val navController = navHost.navController
 
         //creo un riferimento al widget per la bottom navigation
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
         bottomNavigation.setupWithNavController(navController)
-
-}
+    }
 }
