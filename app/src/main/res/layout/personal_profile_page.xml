@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background_color"
     tools:context=".Views.PersonalProfilePageFragment">
 
@@ -12,8 +12,8 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:clickable="true"
-        android:focusable="true"
         android:contentDescription="@string/string_app_logo"
+        android:focusable="true"
         android:padding="5dp"
         app:srcCompat="@drawable/cookie_logo" />
 
@@ -21,8 +21,8 @@
         android:id="@+id/profileDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="true"
         android:layout_below="@id/profile_name"
+        android:baselineAligned="true"
         android:orientation="horizontal">
 
         <!-- Spazi per conteggio post, followers e seguiti -->
@@ -92,8 +92,8 @@
                     android:id="@+id/chefNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="%d"
                     android:layout_gravity="center"
+                    android:text="%d"
                     android:textStyle="bold" />
 
                 <TextView
@@ -121,15 +121,15 @@
     <!--Spazio per nome profilo-->
     <TextView
         android:id="@+id/profile_name"
-        android:fontFamily="@font/coolvetica_regular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_image"
-        android:padding="16dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/coolvetica_regular"
         android:gravity="center_horizontal"
+        android:padding="16dp"
         android:text="@string/profile_name"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <!--Spazio per la bio-->
     <TextView
@@ -137,8 +137,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/profileDetails"
-        android:padding="16dp"
         android:gravity="center_horizontal"
+        android:padding="16dp"
         android:text="@string/insertBio"
         android:textSize="18sp" />
 
@@ -159,8 +159,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
-        android:focusable="true"
         android:contentDescription="@string/settings"
+        android:focusable="true"
         android:padding="5dp"
         app:srcCompat="@drawable/baseline_settings_24_black" />
 
