@@ -35,7 +35,7 @@ class HomeScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.personalAccount.setOnClickListener {
-            findNavController().navigate(R.id.action_homeScreenFragment_to_profilePageFragment)
+            findNavController().navigate(R.id.action_homeScreenFragment_to_PersonalProfilePageFragment2)
         }
         binding.notificationLogo.setOnClickListener {
             findNavController().navigate(R.id.action_homeScreenFragment_to_notificationsFragment)
@@ -52,7 +52,7 @@ class HomeScreenFragment : Fragment() {
             val profile = Gson().toJson(it)
             bundle.putString("profile", profile)
             Navigation.findNavController(requireView())
-                .navigate(R.id.action_homeScreenFragment_to_profilePageFragment, bundle)
+                .navigate(R.id.action_homeScreenFragment_to_profilePageFragment2, bundle)
         }
         binding.bestChefRV.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.giulioaterno.becomechef.Views.HomeScreenFragment"
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_profilePageFragment2"
+            app:destination="@id/profilePageFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_PersonalProfilePageFragment2"
+            app:destination="@id/PersonalProfilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PersonalProfilePageFragment"
+        android:name="com.giulioaterno.becomechef.Views.PersonalProfilePageFragment"
+        android:label="profile_page"
+        tools:layout="@layout/personal_profile_page" >
+        <action
+            android:id="@+id/action_profilePageFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.giulioaterno.becomechef.Views.SettingsFragment"
+        android:label="settings_page"
+        tools:layout="@layout/settings_page" />
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.giulioaterno.becomechef.Views.RecipesFragment"
+        android:label="recipes_page"
+        tools:layout="@layout/recipes_page" />
+    <fragment
+        android:id="@+id/myFridgeFragment"
+        android:name="com.giulioaterno.becomechef.Views.MyFridgeFragment"
+        android:label="myfridge_page"
+        tools:layout="@layout/myfridge_page" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.giulioaterno.becomechef.Views.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.giulioaterno.becomechef.Views.ProfilePageFragment"
+        android:label="fragment_profile_page2"
+        tools:layout="@layout/fragment_profile_page2" >
+        <action
+            android:id="@+id/action_profilePageFragment2_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+</navigation>

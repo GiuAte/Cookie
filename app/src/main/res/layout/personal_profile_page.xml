@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background_color"
-    tools:context=".Views.PersonalProfilePageFragment"
-    android:id="@+id/profile_page">
+    tools:context=".Views.PersonalProfilePageFragment">
 
     <ImageView
         android:id="@+id/appLogo"

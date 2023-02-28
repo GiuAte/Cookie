@@ -1,18 +1,19 @@
 package com.giulioaterno.becomechef.Views
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.giulioaterno.becomechef.DataObject
 import com.giulioaterno.becomechef.ProfileRoundedIcon
 import com.giulioaterno.becomechef.R
-import com.giulioaterno.becomechef.databinding.ProfilePageBinding
-import com.google.gson.Gson
+import com.giulioaterno.becomechef.databinding.PersonalProfilePageBinding
 
-class ProfilePageFragment : Fragment() {
-    private var bindingProfilePage: ProfilePageBinding? = null
+class PersonalProfilePageFragment : Fragment() {
+
+    private var bindingProfilePage: PersonalProfilePageBinding? = null
     private val binding get() = bindingProfilePage!!
 
     override fun onCreateView(
@@ -20,11 +21,8 @@ class ProfilePageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        bindingProfilePage = ProfilePageBinding.inflate(inflater, container, false)
-        val bundle = arguments
-        val myString = bundle?.getString("profile")
-        val profile = Gson().fromJson(myString, ProfileRoundedIcon::class.java)
-        setProfile(profile)
+        bindingProfilePage = PersonalProfilePageBinding.inflate(inflater, container, false)
+        setProfile(DataObject.usernameList.get(0))
         return binding.root
     }
 
