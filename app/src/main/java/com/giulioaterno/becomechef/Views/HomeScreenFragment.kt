@@ -41,7 +41,7 @@ class HomeScreenFragment : Fragment() {
             findNavController().navigate(R.id.action_homeScreenFragment_to_notificationsFragment)
         }
         binding.searchBarLogo.setOnClickListener {
-        hideSearchText()
+            hideSearchText()
         }
     }
 
@@ -60,11 +60,10 @@ class HomeScreenFragment : Fragment() {
         }
     }
 
-    //TODO SISTEMARE SEARCH BAR
     private fun hideSearchText() {
-        if (binding.searchBarLogo.isClickable) {
+        if (binding.searchBar.visibility == View.GONE) {
             binding.searchBar.visibility = View.VISIBLE
-        } else if (binding.searchBarLogo.isClickable) {
+        } else {
             binding.searchBar.visibility = View.GONE
         }
     }
