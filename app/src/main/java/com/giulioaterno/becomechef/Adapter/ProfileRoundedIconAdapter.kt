@@ -1,8 +1,9 @@
-package com.giulioaterno.becomechef
+package com.giulioaterno.becomechef.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.giulioaterno.becomechef.ProfileRoundedIcon
 import com.giulioaterno.becomechef.databinding.BestChefRecyclerViewItemBinding
 
 class ProfileRoundedIconAdapter(

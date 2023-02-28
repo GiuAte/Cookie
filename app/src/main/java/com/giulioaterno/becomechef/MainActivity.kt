@@ -1,9 +1,7 @@
 package com.giulioaterno.becomechef
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.giulioaterno.becomechef.databinding.ActivityMainBinding
@@ -20,13 +18,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //creo un riferimento al nav controller
-        val navHost = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
-        val navController = navHost.navController
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setupWithNavController(navController)
 
-        //creo un riferimento al widget per la bottom navigation
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
-        bottomNavigation.setupWithNavController(navController)
 
-}
+    }
 }

@@ -1,16 +1,17 @@
-package com.giulioaterno.becomechef
+package com.giulioaterno.becomechef.Views
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.giulioaterno.becomechef.ProfileRoundedIcon
+import com.giulioaterno.becomechef.R
 import com.giulioaterno.becomechef.databinding.ProfilePageBinding
 import com.google.gson.Gson
 
-class ProfilePageFragment: Fragment() {
-
+class ProfilePageFragment : Fragment() {
     private var bindingProfilePage: ProfilePageBinding? = null
     private val binding get() = bindingProfilePage!!
 
@@ -31,7 +32,7 @@ class ProfilePageFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.settings.setOnClickListener {
-            findNavController().navigate(R.id.action_profilePageFragment_to_profilePageSettingsFragment)
+            findNavController().navigate(R.id.action_profilePageFragment_to_settingsFragment)
         }
         binding.appLogo.setOnClickListener {
             findNavController().navigate(R.id.action_profilePageFragment_to_homeScreenFragment)

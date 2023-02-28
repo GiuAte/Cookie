@@ -1,4 +1,4 @@
-package com.giulioaterno.becomechef
+package com.giulioaterno.becomechef.ViewModels
 
 import androidx.lifecycle.ViewModel
 
